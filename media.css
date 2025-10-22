@@ -1,0 +1,528 @@
+/* ---------- Responsive media.css (replace existing file) ---------- */
+/* Breakpoint strategy:
+   - xl: 1200px+ (large desktop)
+   - lg: 992px - 1199px (desktop)
+   - md: 768px - 991px (tablet)
+   - sm: 600px - 767px (small tablet / large phone)
+   - xs: 420px - 599px (phone)
+   - xxs: <420px (small phone)
+*/
+
+/* Ensure base scaling for fonts and box-sizing */
+:root{
+  --hero-height-desktop: 85vh;
+  --hero-height-lg: 70vh;
+  --hero-height-md: 56vh;
+  --hero-height-sm: 44vh;
+  --hero-height-xs: 35vh;
+  --card-padding: 1.5rem;
+}
+
+*{ box-sizing: border-box; }
+
+/* Large desktops (>=1200px) - minor tweaks */
+@media (min-width: 1200px) {
+  .hc-content { background-size: cover; background-position: center; }
+  .hc-lpc img { height: 9vw; width: 36%; }
+  .q-box-content span { font-size: 2.3vw; }
+  .info { height: 87vh; }
+}
+
+/* Desktop (>=992px and <1200px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .heroCard { height: var(--hero-height-lg); }
+  .hc-content { width: 92%; }
+  .lpc-ls { width: 52%; margin-left: 8px; }
+  .lpc-rs { width: 48%; }
+}
+
+/* Tablet / small desktop (>=768px and <992px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .heroCard { height: var(--hero-height-md); }
+  .hc-content { width: 95%; padding: 1rem; }
+  .hc-lpc { flex-direction: column; align-items: stretch; gap: 1rem; padding: 1rem 0; }
+  .lpc-ls, .lpc-rs { width: 100%; }
+  .hc-lpc img { height: 12vw; width: 48%; }
+  .q-box { width: 90%; }
+  .info { flex-direction: column; height: auto; }
+  .info-ls { width: 100%; border-right: none; border-bottom: 1px solid #ddd; padding-bottom: 1rem; }
+  .info-rs { width: 100%; padding: 1rem; }
+  .footNav { flex-direction: column; gap: .5rem; }
+  .follow { padding: 3vh 2vw; }
+}
+
+/* Small tablet & large phones (>=600px and <768px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .heroCard { height: var(--hero-height-sm); }
+  .hc-upc { height: auto; }
+  .hc-lpc { flex-direction: column; padding: .75rem; }
+  .hc-lpc span { font-size: 1.25rem; }
+  .hc-lpc img { width: 60%; height: auto; margin: 0.5rem auto; }
+  .q-box-content span { font-size: 1.6rem; line-height: 1.2; }
+  .info { height: auto; padding: 2rem 1rem; }
+  .info-ls { width: 100%; padding: 1rem 0; }
+  .info-rs { width: 100%; padding: 0 1rem; }
+  .aboutDiv { margin: 10px; }
+  .follow { font-size: 1.1rem; }
+  .footNav { padding: 1rem 1rem; flex-wrap: wrap; }
+}
+
+/* Phones (>=420px and <600px) */
+@media (min-width: 420px) and (max-width: 599px) {
+  .heroCard { height: var(--hero-height-xs); }
+  .hc-lpc { gap: .6rem; }
+  .lpc-ls span { font-size: 1.1rem; }
+  .lpc-rs span { font-size: 1rem; }
+  .q-box-content span { font-size: 1.4rem; }
+  .q-border { padding: 2rem; }
+  .info-ls { border-right: none; border-bottom: 1px solid #eee; width: 100%; }
+  .footNav { padding: 1rem; justify-content: center; }
+  .follow { padding: 2vh 1.5vw; }
+  .hc-upc { height: auto; }
+}
+
+/* Small phones (<420px) */
+@media (max-width: 419px) {
+  .heroCard { height: 26vh; margin-bottom: 12px; }
+  .hc-content { border-radius: 10px; padding: .4rem; }
+  .hc-lpc { flex-direction: column; align-items: center; padding: .5rem; gap: .4rem; }
+  .hc-lpc img { width: 80%; height: auto; object-fit: contain; }
+  .hc-lpc span { font-size: 0.95rem; }
+  .lpc-rs span { font-size: 0.9rem; color: #5a3a3a; }
+  .q-box-content span { font-size: 1rem; padding: 0 6px; }
+  .q-box { width: 95%; padding: 2vh .8rem; }
+  .q-border { padding: 1.2rem; border-left: none; border-right: none; }
+  .quote { margin-top: 4vh; }
+  .info { display: block; padding: 1rem 0; }
+  .info-ls, .info-rs { width: 100%; padding: .6rem 1rem; }
+  .aboutDiv { margin: 8px; box-shadow: 4px 4px 0 #f0c36d; }
+  .follow span, .footNav a { font-size: 0.95rem; }
+  .footNav { flex-direction: column; gap: .5rem; padding: 1rem; }
+  .footer { height: auto; padding: 2rem 1rem; }
+  .flink { flex-direction: column; align-items: flex-start; gap: .6rem; }
+}
+
+/* Fine-grain adjustments for very small narrow screens */
+@media (max-width: 350px) {
+  .heroCard { height: 22vh; }
+  .hc-lpc img { width: 90%; }
+  .hc-lpc span { font-size: 0.85rem; }
+  .q-box-content span { font-size: 0.95rem; }
+}
+
+/* Utility responsive tweaks */
+@media (max-width: 991px) {
+  .hc-content { box-shadow: 3px 6px 6px rgba(0,0,0,0.08); }
+  .hc-lpc img { max-width: 70%; }
+  .q-box { width: 92%; }
+}
+
+@media (max-width: 599px){
+  .hc-lpc img { display: block; margin: 0 auto; }
+  .lpc-rs { text-align: center; padding: .5rem; }
+  .info-rs div { font-size: 1rem; }
+}
+
+/* Accessibility: ensure tap targets are comfortable on touch */
+button, .follow a, .footNav a {
+  min-height: 40px;
+  padding: 8px 12px;
+}
+
+/* Final note: if your hero background image is heavy, use a smaller sized background for mobile */
+@media (max-width: 768px){
+  .hc-content { background-size: cover; background-position: center top; }
+  /* Consider using a mobile-friendly background image file: HeroBG-mobile.png */
+}
+
+/* ---------- Responsive Media Queries for Memories Project ---------- */
+/* Target breakpoints:
+   xl: 1200px+ (large desktops)
+   lg: 992–1199px (desktops)
+   md: 768–991px (tablets)
+   sm: 600–767px (small tablets / phablets)
+   xs: <600px (phones)
+*/
+
+/* Large Desktops - keep proportions */
+@media (min-width: 1200px) {
+  .hc-content {
+    background-size: cover;
+    background-position: center;
+  }
+  .q-box-content span {
+    font-size: 2.2vw;
+  }
+  .info {
+    height: 85vh;
+  }
+}
+
+/* Desktops (992–1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .heroCard {
+    height: 75vh;
+  }
+  .hc-lpc img {
+    width: 36%;
+    height: 10vw;
+  }
+  .lpc-ls span {
+    font-size: 2.5rem;
+  }
+  .q-box-content span {
+    font-size: 2rem;
+  }
+}
+
+/* Tablets (768–991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .heroCard {
+    height: 65vh;
+  }
+  .hc-content {
+    width: 95%;
+    padding: 1rem;
+  }
+  .hc-lpc {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    height: auto;
+  }
+  .lpc-ls,
+  .lpc-rs {
+    width: 100%;
+    text-align: center;
+  }
+  .hc-lpc img {
+    width: 50%;
+    height: auto;
+  }
+  .lpc-ls span {
+    font-size: 2rem;
+  }
+  .lpc-rs span {
+    font-size: 1.4rem;
+  }
+  .q-box {
+    width: 90%;
+    padding: 3vh 0;
+  }
+  .q-box-content span {
+    font-size: 1.8rem;
+  }
+  .info {
+    flex-direction: column;
+    height: auto;
+  }
+  .info-ls,
+  .info-rs {
+    width: 100%;
+    border-right: none;
+  }
+  .info-ls {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+  }
+}
+
+/* Small tablets / large phones (600–767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .heroCard {
+    height: 55vh;
+  }
+  .hc-lpc {
+    flex-direction: column;
+    height: auto;
+  }
+  .hc-lpc img {
+    width: 60%;
+  }
+  .lpc-ls span {
+    font-size: 1.8rem;
+  }
+  .lpc-rs span {
+    font-size: 1.2rem;
+  }
+  .q-box-content span {
+    font-size: 1.5rem;
+  }
+  .info {
+    flex-direction: column;
+    height: auto;
+  }
+  .info-rs div {
+    font-size: 1rem;
+  }
+  .aboutDiv {
+    margin: 10px;
+    box-shadow: 6px 6px 0 #f0c36d;
+  }
+}
+
+/* Phones (<600px) */
+@media (max-width: 599px) {
+  .heroCard {
+    height: 40vh;
+    margin-bottom: 14px;
+  }
+  .hc-content {
+    width: 95%;
+    border-radius: 10px;
+    box-shadow: 3px 6px 5px 6px #aaa;
+    padding: 0.6rem;
+  }
+  .hc-lpc {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 0.5rem;
+  }
+  .hc-lpc img {
+    width: 80%;
+    height: auto;
+  }
+  .lpc-ls,
+  .lpc-rs {
+    width: 100%;
+    text-align: center;
+  }
+  .lpc-ls span {
+    font-size: 1.4rem;
+  }
+  .lpc-rs span {
+    font-size: 1rem;
+  }
+  .quote {
+    margin-top: 5vh;
+    padding: 1rem 0;
+  }
+  .q-box {
+    width: 95%;
+    padding: 2vh 0;
+  }
+  .q-border {
+    border-left: none;
+    border-right: none;
+    padding: 1.5rem 0;
+  }
+  .q-box-content span {
+    font-size: 1.2rem;
+  }
+  .info {
+    display: block;
+    height: auto;
+  }
+  .info-ls,
+  .info-rs {
+    width: 100%;
+    border: none;
+    padding: 1rem 0.5rem;
+  }
+  .info-rs div {
+    font-size: 0.95rem;
+  }
+  .aboutDiv {
+    margin: 8px;
+    box-shadow: 4px 4px 0 #f0c36d;
+  }
+  .info-ls a {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small phones (<400px) */
+@media (max-width: 400px) {
+  .heroCard {
+    height: 35vh;
+  }
+  .hc-lpc img {
+    width: 90%;
+  }
+  .lpc-ls span {
+    font-size: 1.1rem;
+  }
+  .q-box-content span {
+    font-size: 1rem;
+  }
+  .info-rs div {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive Media Queries for JS-Generated Elements */
+
+/* Base adjustments for injected Download link */
+#down_link {
+  transition: all 0.3s ease;
+}
+#down_link:hover {
+  color: white;
+}
+
+/* Base card styling (already present dynamically, these are responsive overrides) */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.featureCard {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.cardCont {
+  border: 2px solid #f0c36d;
+  color: #3e3e3e;
+  border-radius: 13px;
+  background-color: #fff3cd;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 40%;
+  min-width: 280px;
+  transition: all 0.3s ease;
+}
+
+.cardImg img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cardText h2 {
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
+}
+
+.cardText p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* "More" Button */
+.cardMore a {
+  font-size: 18px;
+  background-color: #ffb7c5;
+  color: #4b3f72;
+  padding: 12px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cardMore a:hover {
+  background-color: #f48fb1;
+}
+
+/* ------- MEDIA BREAKPOINTS ------- */
+
+/* Desktops (992px+) */
+@media (min-width: 992px) {
+  .cardCont {
+    width: 35%;
+  }
+  .cardText h2 {
+    font-size: 1.8rem;
+  }
+  .cardText p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets (768px–991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .featureCard {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .cardCont {
+    width: 45%;
+    min-width: 260px;
+  }
+  .cardText h2 {
+    font-size: 1.4rem;
+  }
+  .cardText p {
+    font-size: 0.95rem;
+  }
+  #down_link {
+    font-size: 1.6vw;
+    padding: 2.8vw;
+  }
+}
+
+/* Small Tablets / Large Phones (600–767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .featureCard {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardCont {
+    width: 80%;
+  }
+  .cardText h2 {
+    font-size: 1.3rem;
+  }
+  .cardText p {
+    font-size: 0.95rem;
+  }
+  #down_link {
+    font-size: 2.4vw;
+    padding: 3vw;
+  }
+}
+
+/* Phones (<600px) */
+@media (max-width: 599px) {
+  .featureCard {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardCont {
+    width: 90%;
+    padding: 0.9rem;
+  }
+  .cardText h2 {
+    font-size: 1.15rem;
+  }
+  .cardText p {
+    font-size: 0.9rem;
+  }
+  .cardImg img {
+    border-radius: 8px;
+  }
+  #down_link {
+    font-size: 3.6vw;
+    padding: 3.6vw;
+  }
+}
+
+/* Extra Small Phones (<400px) */
+@media (max-width: 400px) {
+  .cardCont {
+    width: 95%;
+  }
+  .cardText h2 {
+    font-size: 1rem;
+  }
+  .cardText p {
+    font-size: 0.85rem;
+  }
+  .cardMore a {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+  #down_link {
+    font-size: 4vw;
+    padding: 4vw;
+  }
+}
+

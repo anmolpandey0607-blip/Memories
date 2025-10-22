@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DE+Grund+Guides&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  background: linear-gradient(to bottom, #fefae0, #ffdab9);
+  background-color: #fefae0;
+}
+
+/*First NavBar Designing*/
+.nav1 {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.n1logo {
+  height: 9vh;
+}
+
+.n1logo img {
+  height: 9vh;
+  width: auto;
+  object-fit: contain;
+  margin-left: 2vw;
+}
+
+.n1btn {
+  margin-right: 2vw;
+}
+
+.n1btn a {
+  text-decoration: none;
+  display: flex;
+  background-color: #fdfdfd;
+  color: black;
+  padding: 7px 7px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: 1.54px solid black;
+}
+
+.n1btn svg {
+  background-color: #fdfdfd;
+}
+
+.n1btn a:hover {
+  background-color: #ff6f61;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.n1btn a:hover svg {
+  background-color: #ff6f61;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/*Second NavBar Designing*/
+.nav2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0.8vh;
+}
+
+.nav2 a {
+  text-decoration: none;
+  padding: 2.3vw;
+  font-size: 1.35vw;
+  color: grey;
+}
+
+.nav2 a:hover {
+  color: white;
+}
+
+.n2content {
+  background-color: black;
+  padding: 12px;
+  border-radius: 3vw;
+}
+
+#on {
+    text-decoration: none;
+    color: white;
+}

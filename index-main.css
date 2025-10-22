@@ -1,0 +1,186 @@
+/*IMPORTS*/
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund+Guides&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Playwrite+DE+Grund+Guides&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Oswald:wght@200..700&family=Playwrite+DE+Grund+Guides&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&display=swap");
+
+/*MAIN CONTENT STARTS*/
+.heroCard {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.hc-content {
+  width: 93%;
+  border: 2px solid grey;
+  height: 100%;
+  margin-top: 2.57vh;
+  border-radius: 14px;
+  background-image: url("Resources/HeroBG(1).png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-shadow: 5px 10px 8px 10px #888888;
+}
+
+.hc-upc {
+  height: 55%;
+}
+
+/*LEFT SIDE CONTENT*/
+.hc-lpc {
+  display: flex;
+  height: 45%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lpc-ls {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  margin-left: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*IMAGE DESIGNER*/
+.hc-lpc img {
+  height: 10vw;
+  width: 39%;
+  object-fit: contain;
+}
+
+/*FONT DEFINING*/
+.lpc-ls span {
+  font-family: "Playwrite DE Grund Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xxx-large;
+}
+
+/*RIGHT SIDE CONTENT DESIGN*/
+
+.lpc-rs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.lpc-rs span {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: brown;
+  font-size: 32px;
+}
+
+/*DESIGNING QUOTATIONS*/
+.quote {
+  width: 100%;
+  background-color: #fff8dc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8vh;
+  color: #3e3e3e;
+}
+
+.q-box {
+  padding: 4vh 0vw;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.q-border {
+  padding: 5vh 0vw;
+  border-left: 1.3px solid black;
+  border-right: 1.3px solid black;
+}
+
+.q-up {
+  margin-top: 15px;
+  border-top: 1.3px solid black;
+}
+
+.q-down {
+  border-bottom: 1.3px solid black;
+}
+
+.q-box-content span {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 780;
+  font-style: normal;
+  font-size: 2.3vw;
+}
+
+/*INFO DECORATION*/
+.info {
+  width: 100%;
+  background-color: #fefae0;
+  color: #1e1e2f;
+  display: flex;
+  height: 87vh;
+}
+
+.info-ls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+  border-right: 1.3px solid black;
+}
+
+.info-rs {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2vw;
+}
+
+.info-rs div {
+  padding: 1vh;
+  font-family: "Playwrite AU TAS", cursive;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+  font-size: 1.15rem;
+}
+
+.aboutDiv{
+    border: 2px solid #d4a94e;
+    margin: 13px;
+    border-radius: 7px;
+    box-shadow:
+    8px 8px 0 #f0c36d;
+    color: #3e3e3e;
+}
+
+.info-ls a {
+  text-decoration: none;
+  color: blue;
+  font-size: 17px;
+}
+
+#switchOn {
+  text-decoration: underline;
+  color: green;
+}
+
+.info-ls a:hover {
+  color: green;
+}
+
+
+
